@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic CS Department Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>CS Department Portal</h1>
+    <nav>
+        <a href="#notices">Notice Board</a>
+        <a href="#courses">Course Search</a>
+    </nav>
+</header>
+
+<main class="container">
+    <!-- Dynamic Notice Board Section -->
+    <section id="notices" class="card">
+        <h2>Department Notice Board</h2>
+        <p>Post and view real-time department updates.</p>
+
+        <form id="noticeForm">
+            <input type="text" id="noticeTitle" placeholder="Notice Title (e.g., Exam Schedule)" required>
+            <textarea id="noticeDesc" placeholder="Notice Details..." rows="3" required></textarea>
+            <button type="submit" class="btn">Publish Notice</button>
+        </form>
+
+        <div id="noticeList" class="notice-container">
+            <!-- Dynamic notices will appear here -->
+        </div>
+    </section>
+
+    <!-- Searchable Course Directory Section -->
+    <section id="courses" class="card">
+        <h2>Search Courses</h2>
+        <input type="text" id="searchInput" placeholder="Search by course name or code...">
+
+        <ul id="courseList" class="course-list">
+            <li><strong>CS101:</strong> Introduction to Programming (Java/Python)</li>
+            <li><strong>CS102:</strong> Data Structures and Algorithms</li>
+            <li><strong>CS201:</strong> Database Management Systems</li>
+            <li><strong>CS301:</strong> Artificial Intelligence & Machine Learning</li>
+            <li><strong>CS302:</strong> Computer Networks & Security</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Department of Computer Science. Dynamic Portal.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
